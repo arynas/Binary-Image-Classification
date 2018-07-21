@@ -58,3 +58,11 @@ classifier.fit_generator(training_set,
                          epochs = 25,
                          validation_data = test_set,
                          validation_steps = 2000)
+
+# Bagian 3 Simpan model
+
+model_yaml = classifier.to_yaml()
+with open("model.yaml", "w") as yaml_file:
+    yaml_file.write(model_yaml)
+classifier.save_weights("model.h5")
+print("Saved model to disk")
