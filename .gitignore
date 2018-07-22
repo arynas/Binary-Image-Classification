@@ -1,0 +1,5 @@
+data/
+.idea/
+model.h5
+model.yaml
+nohup.out
